@@ -1,0 +1,90 @@
+// Created by : Peter Zhu
+// Created on : April
+// This is a program about Rock Paper Scissers
+import java.util.Scanner;
+import java.util.Random;
+public class RockPaperScissers {
+  
+ public static void main(String[] args)
+ {
+  int rock = 0;
+  int scissers = 1;
+  int paper = 2;
+  
+  int com;
+  int user;
+  
+  System.out.println("Rock,Paper,Scisser game!");
+  System.out.println("Rock = 0, Scisser = 1,paper = 2. Choose one as your answer:      ");
+  
+  Random random = new Random();
+  Scanner scanner= new Scanner(System.in);
+  user = scanner.nextInt();
+  
+  if (user<0 || user>2){
+         System.out.println("Invalid answer! please choose other number!");         
+  }
+  
+  com = random.nextInt(3);
+  
+  
+  if (user == com)
+  {  
+          if(user ==0)
+          {
+          System.out.println("Tie!Both choose Rock!");
+          }
+           else if (user == 1)
+           {           
+           System.out.println("Tie! Both player choose scisser!");
+           }
+           else if (user ==2)
+           {
+           System.out.println("Tie! Both player choose Paper!");
+           }
+   }
+  else if(user == 0)
+  {
+         if(com ==1)
+         {
+         System.out.println("You lose");
+         System.out.println("You choose Rock, computer choose paper");
+         }
+         else
+         {
+         System.out.println("You win");
+         System.out.println("You choose Rock, computer choose Scisser");
+         }
+         
+  }
+
+  else if(user ==1)
+  {
+           if(com==0)
+           {
+           System.out.println("You lose");
+           System.out.println("You choose Scisser, computer choose Rock");
+           }
+           else{
+           System.out.println("You win");
+           System.out.println("You choose Scisser, computer choose paper");
+           }
+           
+  }
+ else if (user ==2)
+ {
+          if (com == 0)
+          {
+          System.out.println("You win");
+          System.out.println("You choose Paper, computer choose Rock");
+          }
+          else{
+          System.out.println("You lose");
+          System.out.println("You choose Paper, computer choose Scisser");
+          }
+ 
+ }
+                                 
+  }
+ }
+
